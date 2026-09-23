@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { cn } from "@/lib/utils";
+import { asset, cn } from "@/lib/utils";
 
 type PlaceholderImageProps = {
   alt: string;
@@ -29,7 +29,7 @@ export function PlaceholderImage({
   if (src) {
     return (
       <Image
-        src={src}
+        src={src.startsWith("/") ? asset(src) : src}
         alt={alt}
         fill={fill}
         sizes={sizes}

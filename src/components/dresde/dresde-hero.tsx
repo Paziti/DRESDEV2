@@ -4,7 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { usePrefersReducedMotion } from "@/lib/use-prefers-reduced-motion";
 import { ease, duration } from "@/lib/motion";
-import { cn } from "@/lib/utils";
+import { asset, cn } from "@/lib/utils";
 
 // Served from /public/brand — the real Dresde wordmark, cropped tight
 // from a high-res file provided directly. The crop had noticeably more
@@ -52,7 +52,7 @@ export function DresdeHero({ pinned = false }: { pinned?: boolean }) {
         className="w-[min(78vw,720px,83vh)] px-4"
       >
         <Image
-          src="/brand/dresde-logo.png"
+          src={asset("/brand/dresde-logo.png")}
           alt="Dresde"
           width={LOGO_WIDTH}
           height={LOGO_HEIGHT}

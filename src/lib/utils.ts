@@ -24,3 +24,9 @@ export const cn = createCn({
     },
   },
 });
+
+// next/image and <video> don't prefix basePath onto string paths, so files
+// from public/ would 404 when the site lives under /<repo>/ on GitHub Pages.
+export function asset(path: string) {
+  return `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${path}`;
+}

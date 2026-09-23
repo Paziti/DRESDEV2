@@ -5,6 +5,8 @@ import { ImageResponse } from "next/og";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "Dresde, peluquería y barbería en Bahía Blanca";
+// Rendered once at build time, so it also works on a static host.
+export const dynamic = "force-static";
 
 // The real wordmark, not a system font standing in for it: this is the
 // image WhatsApp and Instagram show every time the site is shared.

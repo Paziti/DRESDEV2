@@ -9,11 +9,12 @@ import {
   useTransform,
 } from "framer-motion";
 import { usePrefersReducedMotion } from "@/lib/use-prefers-reduced-motion";
+import { asset } from "@/lib/utils";
 import { DresdeHero } from "./dresde-hero";
 
 // Not Dresde's own footage — generic stock clip, kept only until real
 // content replaces it. See public/video/ and the README.
-const VIDEO_SRC = "/video/clipper-curtain.mp4";
+const VIDEO_SRC = asset("/video/clipper-curtain.mp4");
 
 // On a wide desktop viewport, `object-cover` barely crops this clip
 // horizontally — the whole 16:9 frame is visible, and the actual

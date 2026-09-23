@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { locations } from "@/lib/locations";
 import { whatsappBookingUrl } from "@/lib/whatsapp";
+import { asset } from "@/lib/utils";
 
 const INSTAGRAM_URL = "https://www.instagram.com/dresde.co";
 
@@ -15,7 +16,7 @@ export function DresdeFooter() {
         <div className="flex flex-col items-start gap-5 md:col-span-4">
           <a href="#top" aria-label="Dresde, volver arriba" className="inline-flex min-h-11 items-center">
             <Image
-              src="/brand/dresde-logo.png"
+              src={asset("/brand/dresde-logo.png")}
               alt="Dresde"
               width={675}
               height={347}

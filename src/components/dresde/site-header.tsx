@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { locations } from "@/lib/locations";
 import { whatsappBookingUrl } from "@/lib/whatsapp";
+import { asset } from "@/lib/utils";
 import { useSelection } from "@/lib/selection-context";
 import { ease, duration } from "@/lib/motion";
 
@@ -71,7 +72,7 @@ export function SiteHeader() {
         className="inline-flex min-h-11 shrink-0 items-center transition-opacity duration-(--duration-fast) hover:opacity-80"
       >
         <Image
-          src="/brand/dresde-logo.png"
+          src={asset("/brand/dresde-logo.png")}
           alt="Dresde"
           width={LOGO_WIDTH}
           height={LOGO_HEIGHT}
